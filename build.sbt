@@ -11,6 +11,6 @@ lazy val root = (project in file("."))
       "com.github.spinalhdl" % "spinalhdl-core_2.12" % spinalVersion,
       "com.github.spinalhdl" % "spinalhdl-lib_2.12" % spinalVersion
     ),
-    addCompilerPlugin("com.github.spinalhdl" % "spinalhdl-idsl-plugin_2.12" % spinalVersion)
+    addCompilerPlugin("com.github.spinalhdl" % "spinalhdl-idsl-plugin_2.12" % spinalVersion),
     fork := true
   )

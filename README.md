@@ -1,7 +1,6 @@
-Spinal Project Template
-=======================
+<h1 align=center> SpinalHDL Project Template </h1>
 
-This repository is a SBT project to help starting your SpinalHDL works. SpinalHDL officially provides a [SBT template](https://github.com/SpinalHDL/SpinalTemplateSbt), and this repository is inspired by [Chisel](https://github.com/freechipsproject/chisel-template) and introduces some GitHub Actions to get you started a clean project.
+This repository is a SBT project template to help starting your SpinalHDL works. SpinalHDL officially provides a SBT [template](https://github.com/SpinalHDL/SpinalTemplateSbt), and this repository is inspired by [Chisel](https://github.com/freechipsproject/chisel-template) and introduces some GitHub Actions to get you started with a clean project.
 
 You can choose this template or the [official one](https://github.com/SpinalHDL/SpinalTemplateSbt) at will.
 
@@ -38,7 +37,7 @@ apt install verilator
 
 Sometimes the Verilator version installed with the package manager is too old, and you need to compile it manually. [Here](https://verilator.org/guide/latest/install.html) are the steps to compile it from scratch.
 
-To veiw the vcd files generated in simulation, a waveform view tool is also required. You can use GTKWave or other commercial tools.
+To veiw the `.vcd` files generated in simulation, a waveform view tool is also required. You can use GTKWave or other commercial tools.
 
 ### Intellij IDEA (optional)
 
@@ -46,9 +45,11 @@ Intellij IDEA is a IDE widely used in the Scala community. We strongly recommend
 
 Intellij IDEA is developed by JetBrains, and you can download it from [here](https://www.jetbrains.com/idea/)(the free Community Edition is good enough). You also need to install its Scala plugin (when you run Intellij IDEA the first time, it will ask you about it).
 
+Sometimes you may need to specify some paths like JDK in the IDE preferences.
+
 ## Get started
 
-#### Create a repository from the template
+### Create a repository from the template
 
 This repository is a Github template. You can create your own repository from it by clicking the green `Use this template` in the top right.
 Please leave `Include all branches` **unchecked**; checking it will pollute the history of your new repository.
@@ -56,12 +57,12 @@ For more information, see ["Creating a repository from a template"](https://docs
 
 **Do NOT clone this repository directly to the local.**
 
-#### Wait for the template cleanup workflow to complete
+### Wait for the template cleanup workflow to complete
 
 After using the template to create your own blank project, please wait a minute or two for the `Template cleanup` workflow to run which will removes some template-specific stuff from the repository (like the LICENSE).
 Refresh the repository page in your browser until you see a 2nd commit by `actions-user` titled `Template cleanup`.
 
-#### Clone your repository
+### Clone your repository
 
 Once you have created a repository from this template and the `Template cleanup` workflow has completed, you can click the green `Code` to get a link for cloning your repository.
 
@@ -71,7 +72,7 @@ cd %NAME%
 ```
 (The variables wrapped in `%` will be filled in by the template cleanup) <!-- #REMOVE-ON-CLEANUP# -->
 
-#### Try the example code
+### Try the example code
 
 Now you have a working SpinalHDL project. Some example RTL code written in Scala, which implements a simple counter, can be found in `src/main/scala/mylib/MyTopLevel.scala`.
 And `src/main/scala/mylib/MyTopLevelSim.scala` is its corresponding testbench.
@@ -89,14 +90,15 @@ sbt "runMain mylib.MyTopLevelVhdl"
 sbt "runMain mylib.MyTopLevelSim"
 ```
 
-#### Dive into SpinalHDL and have fun!
+### Dive into SpinalHDL and have fun!
 
-It's time to create your own hardware! And you will discover the charm of Spinal.
+It's time to create your own hardware! And you will discover the charm of SpinalHDL.
 
 Don't forget:
-- Set project organization and name in `build.sbt`
-- Add a LICENSE file for open source (or closed source).
-- Clean up the `README.md` (i.e. this file)
+- Set project organization and name in `build.sbt`.
+- Add a LICENSE file for open source (or closed source). ([How to select a license?](https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/adding-a-license-to-a-repository))
+- Clean up the `README.md` (i.e. this file) and add your own content.
+- Replace the example Scala code with yours.
 
 Then commit above changes and push it to your repository:
 ```sh
@@ -104,4 +106,5 @@ git commit -m 'Starting %NAME%'
 git push origin main
 ```
 
-If you have any questions or suggestions, feel free to [open an issue](https://github.com/SpinalHDL/SpinalHDL/issues). You can also find other SpinalHDL users and developers on [Gitter](https://gitter.im/SpinalHDL/SpinalHDL).
+Visit the [documentation](https://spinalhdl.github.io/SpinalDoc-RTD) for more SpinalHDL usage.
+If you have any questions or suggestions, please [open an issue](https://github.com/SpinalHDL/SpinalHDL/issues). You can also find other SpinalHDL users and developers on [Gitter](https://gitter.im/SpinalHDL/SpinalHDL).
