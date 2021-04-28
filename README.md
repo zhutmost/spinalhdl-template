@@ -1,4 +1,7 @@
-<h1 align=center> SpinalHDL Project Template </h1>
+<div>
+<img src="https://avatars.githubusercontent.com/u/10659437?s=200&v=4" alt="SpinalHDL Logo" align="left" width="40" height="40"/>
+<h1 align="left"> SpinalHDL Project Template </h1>
+</div>
 
 This repository is a SBT project template to help starting your SpinalHDL works. SpinalHDL officially provides a SBT [template](https://github.com/SpinalHDL/SpinalTemplateSbt), and this repository is inspired by [Chisel](https://github.com/freechipsproject/chisel-template) and introduces some GitHub Actions to get you started with a clean project.
 
