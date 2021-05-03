@@ -91,7 +91,7 @@ local.properties
 .worksheet
 
 # ==============================================================================
-# IDE & Editor - Eclipse
+# IDE & Editor - Emacs
 
 *~
 \#*\#
