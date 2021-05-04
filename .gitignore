@@ -31,6 +31,7 @@ hs_err_pid*
 # ==============================================================================
 # Language & Build Tool - SBT
 
+/.bsp/sbt.json
 .cache/
 .history/
 .lib/
