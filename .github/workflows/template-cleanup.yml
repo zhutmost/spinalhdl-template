@@ -27,7 +27,7 @@ jobs:
           NAME="${GITHUB_REPOSITORY##*/}"
           ORG="$GITHUB_REPOSITORY_OWNER"
           SAFE_ORG=$(echo $ORG | sed 's/[^a-zA-Z0-9]//g' | tr '[:upper:]' '[:lower:]')
-          GROUP="com.github.$SAFE_ORG"
+          GROUP="io.github.$SAFE_ORG"
 
           # Replace placeholders
           sed -i "s/%NAME%/$NAME/g" build.sbt README.md
