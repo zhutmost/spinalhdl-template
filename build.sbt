@@ -12,6 +12,7 @@ lazy val root = (project in file("."))
       "com.github.spinalhdl" %% "spinalhdl-core" % spinalVersion,
       "com.github.spinalhdl" %% "spinalhdl-lib" % spinalVersion
     ),
+    addCompilerPlugin("com.github.spinalhdl" %% "spinalhdl-idsl-plugin" % spinalVersion),
 
     scalacOptions ++= Seq(
       "-encoding", "utf8",
@@ -26,5 +27,3 @@ lazy val root = (project in file("."))
     // fork a new JVM for 'run' and 'Test/run'
     fork := true
   )
-
-addCompilerPlugin("com.github.spinalhdl" %% "spinalhdl-idsl-plugin" % spinalVersion)
