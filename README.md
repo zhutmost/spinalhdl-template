@@ -44,7 +44,7 @@ To veiw the `.vcd` files generated in simulation, a waveform view tool is also r
 
 ### Intellij IDEA (optional)
 
-Intellij IDEA is a IDE widely used in the Scala community. We strongly recommend you to used it, if you need an IDE.
+Intellij IDEA is an IDE widely used in the Scala community. We strongly recommend you to use it, if you need an IDE.
 
 Intellij IDEA is developed by JetBrains, and you can download it from [here](https://www.jetbrains.com/idea/)(the free Community Edition is good enough). You also need to install its Scala plugin (when you run Intellij IDEA the first time, it will ask you about it).
 
