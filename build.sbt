@@ -2,23 +2,24 @@ ThisBuild / scalaVersion := "2.12.13"
 ThisBuild / version      := "0.1.0"
 ThisBuild / organization := "%ORGANIZATION%"
 
-val spinalVersion = "1.4.3"
+val spinalVersion = "1.5.0"
+val spinalCore = "com.github.spinalhdl" %% "spinalhdl-core" % spinalVersion
+val spinalLib = "com.github.spinalhdl" %% "spinalhdl-lib" % spinalVersion
+val spinalIdslPlugin = compilerPlugin("com.github.spinalhdl" %% "spinalhdl-idsl-plugin" % spinalVersion)
 
 lazy val root = (project in file("."))
   .settings(
     name := "%NAME%",
 
-    libraryDependencies ++= Seq(
-      "com.github.spinalhdl" %% "spinalhdl-core" % spinalVersion,
-      "com.github.spinalhdl" %% "spinalhdl-lib" % spinalVersion
-    ),
-    addCompilerPlugin("com.github.spinalhdl" %% "spinalhdl-idsl-plugin" % spinalVersion),
+    libraryDependencies ++= Seq(spinalCore, spinalLib, spinalIdslPlugin)
 
     scalacOptions ++= Seq(
       "-encoding", "utf8",
       "-Xfatal-warnings",
+      "-feature",
       "-deprecation",
       "-unchecked",
+      "-language:reflectiveCalls" // required by SpinalSim
     ),
 
     // allow to use operator syntax in the postfix position, such as "UInt(8 bits)"
