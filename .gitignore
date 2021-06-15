@@ -141,6 +141,9 @@ Session.vim
 
 .vscode/
 
+# Metals plugin
+.metals/
+
 # ==============================================================================
 # IDE & Editor - JetBrains
 
