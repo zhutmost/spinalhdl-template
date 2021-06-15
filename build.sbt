@@ -11,7 +11,7 @@ lazy val root = (project in file("."))
   .settings(
     name := "%NAME%",
 
-    libraryDependencies ++= Seq(spinalCore, spinalLib, spinalIdslPlugin)
+    libraryDependencies ++= Seq(spinalCore, spinalLib, spinalIdslPlugin),
 
     scalacOptions ++= Seq(
       "-encoding", "utf8",
