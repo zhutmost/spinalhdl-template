@@ -35,9 +35,10 @@ jobs:
           GROUP="com.github.$SAFE_ACTOR.$SAFE_NAME"
 
           # Replace placeholders in project files
-          sed -i "s/%NAME%/$NAME/g" build.sbt README.md
+          sed -i "s/%NAME%/$NAME/g" build.sc README.md
           sed -i "s/%REPOSITORY%/${GITHUB_REPOSITORY/\//\\/}/g" README.md
-          sed -i "s/%ORGANIZATION%/$GROUP/g" build.sbt
+          sed -i "s/%ACTOR%/$ACTOR/g" build.sc
+          sed -i "s/%ORGANIZATION%/$GROUP/g" build.sc
 
           # Remove lines marked with #REMOVE-ON-CLEANUP#
           sed -i '/#REMOVE-ON-CLEANUP#/d' README.md
