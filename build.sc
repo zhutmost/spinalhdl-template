@@ -31,7 +31,7 @@ object mylib extends CommonModule with ScalafmtModule with PublishModule {
     description = "My first SpinalHDL project",
     organization = "%ORGANIZATION%",
     url = "https://github.com/%REPOSITORY%",
-    licenses = Seq(License.MIT),
+    licenses = Seq(License.MIT), // Do NOT forget change it to your license!
     versionControl = VersionControl.github("%ACTOR%", "%NAME%"),
     developers = Seq(
       Developer("%ACTOR%", "%ACTOR%", "https://github.com/%ACTOR%")

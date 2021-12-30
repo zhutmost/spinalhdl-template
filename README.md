@@ -3,7 +3,7 @@
 <h1 align="left"> SpinalHDL Project Template </h1>
 </div>
 
-This repository is a SBT project template to help starting your SpinalHDL works. SpinalHDL officially provides a SBT [template](https://github.com/SpinalHDL/SpinalTemplateSbt), and this repository is inspired by [Chisel](https://github.com/freechipsproject/chisel-template) and introduces some GitHub Actions to get you started with a clean project.
+This repository is a Mill project template to help starting your SpinalHDL works. SpinalHDL officially provides a SBT [template](https://github.com/SpinalHDL/SpinalTemplateSbt), and this repository is inspired by [Chisel](https://github.com/freechipsproject/chisel-template) and introduces some GitHub Actions to get you started with a clean project.
 
 You can choose this template or the [official one](https://github.com/SpinalHDL/SpinalTemplateSbt) at will.
 
@@ -11,7 +11,7 @@ You can choose this template or the [official one](https://github.com/SpinalHDL/
 
 ### JDK
 
-Before starting, please make sure you have a JDK >= 8 installed. You can install a JDK through the package manager that comes with your OS, or just download a prebuilt binaries such as [AdoptOpenJDK](https://adoptopenjdk.net/).
+Before starting, please make sure you have a JDK >= 8 installed. You can install a JDK through the package manager that comes with your OS, or just download a prebuilt binaries such as [AdoptOpenJDK](https://adoptopenjdk.net).
 
 To install a JDK LTS:
 
@@ -22,15 +22,23 @@ brew install openjdk@11
 apt install default-jdk
 ```
 
-### SBT
+### Mill Build Tool
 
-SBT is a build tool widely used by Scala projects. If you only compile your Scala code in Intellij IDEA, you can use its built-in SBT without installing another one. Otherwise, you need download it from its [official website](https://www.scala-sbt.org/download.html) so that you can use SBT on the command line.
+Mill is a powerful build tool by [Haoyi Li](https://github.com/lihaoyi).
+
+To install Mill:
+```sh
+# macOS with Homebrew
+brew install mill
+```
+
+To install mill on other platforms, please visit [its documentation](https://com-lihaoyi.github.io/mill/mill/Intro_to_Mill.html).
 
 ### Verilator (optional)
 
 If you want to run the Scala-written testbench, you need to install a simulation tool, such as Verilator.
 
-To install a Verilator:
+To install Verilator:
 ```sh
 # macOS with Homebrew
 brew install verilator
@@ -77,20 +85,20 @@ cd %NAME%
 
 ### Try the example code
 
-Now you have a working SpinalHDL project. Some example RTL code written in Scala, which implements a simple counter, can be found in `src/main/scala/mylib/MyTopLevel.scala`.
-And `src/main/scala/mylib/MyTopLevelSim.scala` is its corresponding testbench.
+Now you have a working SpinalHDL project. Some example RTL code written in Scala, which implements a simple counter, can be found in `mylib/src/mylib/MyTopLevel.scala`.
+And `mylib/src/mylib/MyTopLevelSim.scala` is its corresponding testbench.
 
-Open a terminal in the root of your cloned repository and run `sbt run`. The first time it runs, the process may take some minutes to download dependencies.
+Open a terminal in the root of your cloned repository and run `mill mylib.runMain`. The first time it runs, the process may take some minutes to download dependencies.
 
 ```sh
 //If you want to generate the Verilog of your design
-sbt "runMain mylib.MyTopLevelVerilog"
+mill mylib.runMain mylib.MyTopLevelVerilog
 
 //If you want to generate the VHDL of your design
-sbt "runMain mylib.MyTopLevelVhdl"
+mill mylib.runMain mylib.MyTopLevelVhdl
 
 //If you want to run the scala written testbench
-sbt "runMain mylib.MyTopLevelSim"
+mill mylib.runMain mylib.MyTopLevelSim
 ```
 
 ### Dive into SpinalHDL and have fun!
@@ -98,10 +106,10 @@ sbt "runMain mylib.MyTopLevelSim"
 It's time to create your own hardware! And you will discover the charm of SpinalHDL.
 
 Don't forget:
-- Set project organization and name in `build.sbt`.
 - Add a LICENSE file for open source (or closed source). ([How to select a license?](https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/adding-a-license-to-a-repository))
+- Set project organization and other publish settings in `build.sc`.
 - Clean up the `README.md` (i.e. this file) and add your own content.
-- Replace the example Scala code with yours.
+- Replace the example SpinalHDL code with yours.
 
 Then commit above changes and push it to your repository:
 ```sh
