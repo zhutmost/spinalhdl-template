@@ -24,7 +24,7 @@ apt install default-jdk
 
 ### Mill Build Tool
 
-Mill is a powerful build tool by [Haoyi Li](https://github.com/lihaoyi).
+Mill is a powerful and easy-to-use build tool by [Haoyi Li](https://github.com/lihaoyi).
 
 To install Mill:
 ```sh
@@ -91,13 +91,13 @@ And `mylib/src/mylib/MyTopLevelSim.scala` is its corresponding testbench.
 Open a terminal in the root of your cloned repository and run `mill mylib.runMain`. The first time it runs, the process may take some minutes to download dependencies.
 
 ```sh
-//If you want to generate the Verilog of your design
+# If you want to generate the Verilog of your design
 mill mylib.runMain mylib.MyTopLevelVerilog
 
-//If you want to generate the VHDL of your design
+# If you want to generate the VHDL of your design
 mill mylib.runMain mylib.MyTopLevelVhdl
 
-//If you want to run the scala written testbench
+# If you want to run the scala written testbench
 mill mylib.runMain mylib.MyTopLevelSim
 ```
 
@@ -116,6 +116,13 @@ Then commit above changes and push it to your repository:
 git commit -m 'Starting %NAME%'
 git push origin main
 ```
+
+To open this project in IDE (such as IDEA), please export the BSP configuration first.
+```sh
+mill mill.bsp.BSP/install
+```
+
+### For more infomation
 
 Visit the [documentation](https://spinalhdl.github.io/SpinalDoc-RTD) for more SpinalHDL usage.
 If you have any questions or suggestions, please [open an issue](https://github.com/SpinalHDL/SpinalHDL/issues). You can also find other SpinalHDL users and developers on [Gitter](https://gitter.im/SpinalHDL/SpinalHDL).
