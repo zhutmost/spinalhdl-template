@@ -1,7 +1,7 @@
 import mill._, scalalib._, scalafmt._, publish._
 
 trait CommonModule extends ScalaModule {
-  def scalaVersion = "2.13.7"
+  def scalaVersion = "2.13.8"
 
   override def scalacOptions = Seq(
     "-encoding", "utf8",
@@ -13,16 +13,17 @@ trait CommonModule extends ScalaModule {
     "-language:postfixOps" // use operator syntax in the postfix position
   )
 
+val spinalVersion = "1.6.4"
   override def ivyDeps = Agg(
-    ivy"com.github.spinalhdl::spinalhdl-core:1.6.1",
-    ivy"com.github.spinalhdl::spinalhdl-lib:1.6.1",
+    ivy"com.github.spinalhdl::spinalhdl-core:$spinalVersion",
+    ivy"com.github.spinalhdl::spinalhdl-lib:$spinalVersion",
   )
-  override def scalacPluginIvyDeps = Agg(ivy"com.github.spinalhdl::spinalhdl-idsl-plugin:1.6.1")
+  override def scalacPluginIvyDeps = Agg(ivy"com.github.spinalhdl::spinalhdl-idsl-plugin:$spinalVersion")
 }
 
 object mylib extends CommonModule with ScalafmtModule with PublishModule {
   // object test extends Tests with TestModule.ScalaTest {
-  //   override def ivyDeps = Agg(ivy"org.scalatest::scalatest:3.2.10")
+  //   override def ivyDeps = Agg(ivy"org.scalatest::scalatest:3.2.11")
   // }
 
   override def publishVersion = "0.0.1-SNAPSHOT"
