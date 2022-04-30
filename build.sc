@@ -10,10 +10,10 @@ trait CommonModule extends ScalaModule {
     "-deprecation",
     "-feature",
     "-language:reflectiveCalls", // required by SpinalSim
-    "-language:postfixOps" // use operator syntax in the postfix position
+    "-language:postfixOps" // use operator syntax in postfix positions
   )
 
-val spinalVersion = "1.6.4"
+val spinalVersion = "1.7.0"
   override def ivyDeps = Agg(
     ivy"com.github.spinalhdl::spinalhdl-core:$spinalVersion",
     ivy"com.github.spinalhdl::spinalhdl-lib:$spinalVersion",
