@@ -86,9 +86,9 @@ cd %NAME%
 ### Try the example code
 
 Now you have a working SpinalHDL project. Some example RTL code written in Scala, which implements a simple counter, can be found in `mylib/src/mylib/MyTop.scala`.
-And `mylib/src/mylib/MyTopSim.scala` is its corresponding testbench.
+And `mylib/test/src/mylib/MyTopSimSpec.scala` is its corresponding testbench.
 
-Open a terminal in the root of your cloned repository and run `mill mylib.runMain`. The first time it runs, the process may take some minutes to download dependencies.
+Open a terminal in the root of your cloned repository and run `mill mylib.run`. The first time it runs, the process may take some minutes to download dependencies.
 
 ```sh
 # Emit Verilog RTL of your design
@@ -122,4 +122,4 @@ mill mill.bsp.BSP/install
 ### For more infomation
 
 Visit the [documentation](https://spinalhdl.github.io/SpinalDoc-RTD) for more SpinalHDL usage.
-If you have any questions or suggestions, please [open an issue](https://github.com/SpinalHDL/SpinalHDL/issues). You can also find other SpinalHDL users and developers on [Gitter](https://gitter.im/SpinalHDL/SpinalHDL).
+If you have any questions or suggestions about this template itself, please [open an issue](https://github.com/zhutmost/spinalhdl-template/issues).
