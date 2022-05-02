@@ -85,20 +85,17 @@ cd %NAME%
 
 ### Try the example code
 
-Now you have a working SpinalHDL project. Some example RTL code written in Scala, which implements a simple counter, can be found in `mylib/src/mylib/MyTopLevel.scala`.
-And `mylib/src/mylib/MyTopLevelSim.scala` is its corresponding testbench.
+Now you have a working SpinalHDL project. Some example RTL code written in Scala, which implements a simple counter, can be found in `mylib/src/mylib/MyTop.scala`.
+And `mylib/src/mylib/MyTopSim.scala` is its corresponding testbench.
 
 Open a terminal in the root of your cloned repository and run `mill mylib.runMain`. The first time it runs, the process may take some minutes to download dependencies.
 
 ```sh
-# If you want to generate the Verilog of your design
-mill mylib.runMain mylib.MyTopLevelVerilog
+# Emit Verilog RTL of your design
+mill mylib.run
 
-# If you want to generate the VHDL of your design
-mill mylib.runMain mylib.MyTopLevelVhdl
-
-# If you want to run the scala written testbench
-mill mylib.runMain mylib.MyTopLevelSim
+# Run its Scala-written testbench
+mill mylib.test
 ```
 
 ### Dive into SpinalHDL and have fun!
