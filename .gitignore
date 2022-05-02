@@ -43,6 +43,12 @@ project/boot/
 project/plugins/project/
 
 # ==============================================================================
+# Language & Build Tool - Mill
+
+.bsp/
+bsp.log
+
+# ==============================================================================
 # IDE & Editor - Eclipse
 
 *.pydevproject
