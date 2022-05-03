@@ -13,7 +13,7 @@ trait CommonModule extends ScalaModule {
     "-language:postfixOps" // use operator syntax in postfix positions
   )
 
-val spinalVersion = "1.7.0"
+  val spinalVersion = "1.7.0"
   override def ivyDeps = Agg(
     ivy"com.github.spinalhdl::spinalhdl-core:$spinalVersion",
     ivy"com.github.spinalhdl::spinalhdl-lib:$spinalVersion",
@@ -22,9 +22,9 @@ val spinalVersion = "1.7.0"
 }
 
 object mylib extends CommonModule with ScalafmtModule with PublishModule {
-   object test extends Tests with TestModule.ScalaTest {
-     override def ivyDeps = Agg(ivy"org.scalatest::scalatest:3.2.11")
-   }
+  object test extends Tests with TestModule.ScalaTest {
+    override def ivyDeps = Agg(ivy"org.scalatest::scalatest:3.2.11")
+  }
 
   override def publishVersion = "0.0.1-SNAPSHOT"
 
