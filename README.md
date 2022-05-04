@@ -95,7 +95,7 @@ Open a terminal in the root of your cloned repository and run `mill mylib.run`. 
 mill mylib.run
 
 # Run its Scala-written testbench
-mill mylib.test
+mill mylib.testSim
 ```
 
 ### Dive into SpinalHDL and have fun!
