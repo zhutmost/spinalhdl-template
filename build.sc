@@ -27,11 +27,6 @@ trait SpinalModule extends ScalaModule {
 object mylib extends SpinalModule with ScalafmtModule with PublishModule {
   object test extends Tests with TestModule.ScalaTest {
     override def ivyDeps = Agg(ivy"org.scalatest::scalatest:3.2.12")
-
-    // A workaround to run ScalaTest with Mill
-    def testSim(args: String*) = T.command {
-      super.runMain("org.scalatest.run", args: _*)
-    }
   }
 
   override def publishVersion = "0.0.1-SNAPSHOT"
