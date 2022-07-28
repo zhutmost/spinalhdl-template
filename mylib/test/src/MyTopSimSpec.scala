@@ -14,7 +14,7 @@ class MyTopSimSpec extends FixtureAnyFlatSpec with fixture.TestDataFixture {
     .allOptimisation
     .compile(new MyTop)
 
-  "a MyTop component" should "count continuously 0 to 255" in { td =>
+  "a MyTop component" should "count continuously" in { td =>
     compiled.doSim(td.name) { dut =>
       dut.clockDomain.forkStimulus(clockPeriod)
 

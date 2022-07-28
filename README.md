@@ -46,8 +46,6 @@ brew install verilator
 apt install verilator
 ```
 
-Sometimes the Verilator version installed with the package manager is too old, and you need to compile it manually. [Here](https://verilator.org/guide/latest/install.html) are the steps to compile it from scratch.
-
 To veiw the `.vcd` files generated in simulation, a waveform view tool is also required. You can use GTKWave or other commercial tools.
 
 ### Intellij IDEA (optional)
@@ -114,7 +112,7 @@ git commit -m 'Starting %NAME%'
 git push origin main
 ```
 
-To open this project in IDE (such as IDEA), please export the BSP configuration first.
+To open this project in an IDE (such as IDEA), please export the BSP configuration first.
 ```sh
 mill mill.bsp.BSP/install
 ```
