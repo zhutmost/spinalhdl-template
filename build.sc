@@ -7,26 +7,29 @@ trait SpinalModule extends ScalaModule {
   def scalaVersion = "2.13.8"
 
   override def scalacOptions = Seq(
-    "-encoding", "utf8",
+    "-encoding",
+    "utf8",
     "-Xfatal-warnings",
     "-unchecked",
     "-deprecation",
     "-feature",
     "-language:reflectiveCalls", // required by SpinalSim
-    "-language:postfixOps" // use operator syntax in postfix positions
+    "-language:postfixOps"       // use operator syntax in postfix positions
   )
 
   val spinalVersion = "1.7.2"
   override def ivyDeps = Agg(
     ivy"com.github.spinalhdl::spinalhdl-core:$spinalVersion",
-    ivy"com.github.spinalhdl::spinalhdl-lib:$spinalVersion",
+    ivy"com.github.spinalhdl::spinalhdl-lib:$spinalVersion"
   )
-  override def scalacPluginIvyDeps = Agg(ivy"com.github.spinalhdl::spinalhdl-idsl-plugin:$spinalVersion")
+  override def scalacPluginIvyDeps = Agg(
+    ivy"com.github.spinalhdl::spinalhdl-idsl-plugin:$spinalVersion"
+  )
 }
 
 object mylib extends SpinalModule with ScalafmtModule with PublishModule {
   object test extends Tests with TestModule.ScalaTest {
-    override def ivyDeps = Agg(ivy"org.scalatest::scalatest:3.2.12")
+    override def ivyDeps = Agg(ivy"org.scalatest::scalatest:3.2.13")
   }
 
   override def publishVersion = "0.0.1-SNAPSHOT"
@@ -37,8 +40,6 @@ object mylib extends SpinalModule with ScalafmtModule with PublishModule {
     url = "https://github.com/%REPOSITORY%",
     licenses = Seq(License.MIT), // Do NOT forget change it to your license!
     versionControl = VersionControl.github("%ACTOR%", "%NAME%"),
-    developers = Seq(
-      Developer("%ACTOR%", "%ACTOR%", "https://github.com/%ACTOR%")
-    )
+    developers = Seq(Developer("%ACTOR%", "%ACTOR%", "https://github.com/%ACTOR%"))
   )
 }
