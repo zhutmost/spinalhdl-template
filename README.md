@@ -9,7 +9,10 @@ You can choose this template or the [official one](https://github.com/SpinalHDL/
 
 ## Dependencies
 
-### JDK
+Click the triangle (►) on the left to view the installation guide.
+
+<details>
+<summary> JDK </summart>
 
 Before starting, please make sure you have a JDK >= 8 installed. You can install a JDK through the package manager that comes with your OS, or just download a prebuilt binaries such as [AdoptOpenJDK](https://adoptopenjdk.net).
 
@@ -21,8 +24,13 @@ brew install openjdk@11
 # Ubuntu
 apt install default-jdk
 ```
+</details>
+<details>
+<summary> Mill build tool </summart>
 
-### Mill Build Tool
+</details>
+<details>
+<summary> Mill build tool </summart>
 
 Mill is a powerful and easy-to-use build tool by [Haoyi Li](https://github.com/lihaoyi).
 
@@ -33,8 +41,9 @@ brew install mill
 ```
 
 To install mill on other platforms, please visit [its documentation](https://com-lihaoyi.github.io/mill/mill/Intro_to_Mill.html).
-
-### Verilator (optional)
+</details>
+<details>
+<summary> Verilator (optional) </summart>
 
 If you want to run the Scala-written testbench, you need to install a simulation tool, such as Verilator.
 
@@ -47,14 +56,16 @@ apt install verilator
 ```
 
 To veiw the `.vcd` files generated in simulation, a waveform view tool is also required. You can use GTKWave or other commercial tools.
-
-### Intellij IDEA (optional)
+</details>
+<details>
+<summary> Intellij IDEA (optional) </summart>
 
 Intellij IDEA is an IDE widely used in the Scala community. We strongly recommend you to use it, if you need an IDE.
 
 Intellij IDEA is developed by JetBrains, and you can download it from [here](https://www.jetbrains.com/idea/)(the free Community Edition is good enough). You also need to install its Scala plugin (when you run Intellij IDEA the first time, it will ask you about it).
 
 Sometimes you may need to specify some paths like JDK in the IDE preferences.
+</details>
 
 ## Get started
 
@@ -83,8 +94,8 @@ cd %NAME%
 
 ### Try the example code
 
-Now you have a working SpinalHDL project. Some example RTL code written in Scala, which implements a simple counter, can be found in `mylib/src/mylib/MyTop.scala`.
-And `mylib/test/src/mylib/MyTopSimSpec.scala` is its corresponding testbench.
+Now you have a working SpinalHDL project. Some example RTL code written in Scala, which implements a simple counter, can be found in `mylib/src/MyTop.scala`.
+And `mylib/test/src/MyTopSimSpec.scala` is its corresponding testbench.
 
 Open a terminal in the root of your cloned repository and run `mill mylib.run`. The first time it runs, the process may take some minutes to download dependencies.
 
@@ -93,7 +104,7 @@ Open a terminal in the root of your cloned repository and run `mill mylib.run`. 
 mill mylib.run
 
 # Run its Scala-written testbench
-mill mylib.test.testSim
+mill mylib.test
 ```
 
 ### Dive into SpinalHDL and have fun!
