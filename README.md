@@ -12,7 +12,7 @@ You can choose this template or the [official one](https://github.com/SpinalHDL/
 Click the triangle (►) on the left to view the installation guide.
 
 <details>
-<summary> JDK </summart>
+<summary> JDK </summary>
 
 Before starting, please make sure you have a JDK >= 8 installed. You can install a JDK through the package manager that comes with your OS, or just download a prebuilt binaries such as [AdoptOpenJDK](https://adoptopenjdk.net).
 
@@ -25,12 +25,9 @@ brew install openjdk@11
 apt install default-jdk
 ```
 </details>
-<details>
-<summary> Mill build tool </summart>
 
-</details>
 <details>
-<summary> Mill build tool </summart>
+<summary> Mill build tool </summary>
 
 Mill is a powerful and easy-to-use build tool by [Haoyi Li](https://github.com/lihaoyi).
 
@@ -43,7 +40,7 @@ brew install mill
 To install mill on other platforms, please visit [its documentation](https://com-lihaoyi.github.io/mill/mill/Intro_to_Mill.html).
 </details>
 <details>
-<summary> Verilator (optional) </summart>
+<summary> Verilator (optional) </summary>
 
 If you want to run the Scala-written testbench, you need to install a simulation tool, such as Verilator.
 
@@ -58,7 +55,7 @@ apt install verilator
 To veiw the `.vcd` files generated in simulation, a waveform view tool is also required. You can use GTKWave or other commercial tools.
 </details>
 <details>
-<summary> Intellij IDEA (optional) </summart>
+<summary> Intellij IDEA (optional) </summary>
 
 Intellij IDEA is an IDE widely used in the Scala community. We strongly recommend you to use it, if you need an IDE.
 
