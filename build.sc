@@ -17,7 +17,7 @@ trait SpinalModule extends ScalaModule {
     "-language:postfixOps"       // use operator syntax in postfix positions
   )
 
-  val spinalVersion = "1.7.2"
+  val spinalVersion = "1.7.3"
   override def ivyDeps = Agg(
     ivy"com.github.spinalhdl::spinalhdl-core:$spinalVersion",
     ivy"com.github.spinalhdl::spinalhdl-lib:$spinalVersion"
