@@ -14,13 +14,13 @@ Click the triangle (►) on the left to view the installation guide.
 <details>
 <summary> JDK </summary>
 
-Before starting, please make sure you have a JDK >= 8 installed. You can install a JDK through the package manager that comes with your OS, or just download a prebuilt binaries such as [AdoptOpenJDK](https://adoptopenjdk.net).
+Before starting, please make sure you have a JDK >= 8 installed. You can install a JDK through the package manager that comes with your OS, or just download a prebuilt binaries such as [Temurin](https://adoptium.net) or [Oracle OpenJDK](https://jdk.java.net/19).
 
 To install a JDK LTS:
 
 ```sh
 # macOS with Homebrew
-brew install openjdk@11
+brew install openjdk@17
 # Ubuntu
 apt install default-jdk
 ```
@@ -59,7 +59,7 @@ To veiw the `.vcd` files generated in simulation, a waveform view tool is also r
 
 Intellij IDEA is an IDE widely used in the Scala community. We strongly recommend you to use it, if you need an IDE.
 
-Intellij IDEA is developed by JetBrains, and you can download it from [here](https://www.jetbrains.com/idea/)(the free Community Edition is good enough). You also need to install its Scala plugin (when you run Intellij IDEA the first time, it will ask you about it).
+Intellij IDEA is developed by JetBrains, and you can download it from [here](https://www.jetbrains.com/idea)(the free Community Edition is good enough). You also need to install its Scala plugin (when you run Intellij IDEA the first time, it will ask you about it).
 
 Sometimes you may need to specify some paths like JDK in the IDE preferences.
 </details>
@@ -100,7 +100,7 @@ Open a terminal in the root of your cloned repository and run `mill mylib.run`. 
 # Emit Verilog RTL of your design
 mill mylib.run
 
-# Run its Scala-written testbench
+# Run its Scala-written testbench with ScalaTest framework
 mill mylib.test
 ```
 
