@@ -4,7 +4,7 @@ import scalafmt._
 import publish._
 
 trait SpinalModule extends ScalaModule {
-  def scalaVersion = "2.13.8"
+  def scalaVersion = "2.13.10"
 
   override def scalacOptions = Seq(
     "-encoding",
